@@ -1,1 +1,77 @@
 /* Packet Map Component Styles */
+
+.packet-map-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Loading State */
+.loading-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #2196f3;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-message p {
+  margin-top: 15px;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Error State */
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border-left: 4px solid #c62828;
+  margin: 20px 0;
+}
+
+.error-message p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .packet-map-container {
+    padding: 10px;
+  }
+
+  #map {
+    height: 400px;
+  }
+}
